@@ -1,6 +1,6 @@
 # Athari Khaled - Portfolio Website
 
-![Portfolio Screenshot](./screenshot.png) <!-- Add a screenshot later -->
+![Portfolio Screenshot](./Portfolio Website.png) <!-- Add a screenshot later -->
 
 A responsive personal portfolio website showcasing my skills, projects, and contact information.
 
@@ -32,12 +32,13 @@ portfolio website/
 │ ├── laptop.png
 │ └── ...
  README.md # This file
+Portfolio Website.png
 ```
 
 
 ## 🌐 Live Demo
 
-[View Live Portfolio](https://yourusername.github.io) <!-- Update with your link -->
+[View Live Portfolio](https://athari22.github.io/Athari-Khaled---Portfolio/)<!-- Update with your link -->
 
 ## 🖥️ Local Development
 
