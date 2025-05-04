@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Athari Khaled - Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <!-- Combined Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Pacifico&family=El+Messiri&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Dark Mode Toggle -->
+    <button id="darkModeToggle" aria-label="Dark mode toggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Mobile Menu Button (hidden by default) -->
+    <button class="mobile-menu-button" aria-label="Mobile menu">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Athari Khaled</h1>
+            <div class="profession-title">
+                <span class="typed-text"></span><span class="cursor">&nbsp;</span>
+            </div>
+            <img class="laptop-icon" src="images/laptop.png" alt="Coding illustration">
+            <a href="#contact" class="cta-button">Let's Connect <i class="fas fa-arrow-down"></i></a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <!-- Profile Section -->
+        <section class="profile-section">
+            <div class="profile-image-container">
+                <img class="profile-image" src="images/profile.png" alt="Profile picture">
+                <div class="image-border"></div>
+            </div>
+            <h2>Hello, I'm Athari</h2>
+            <p class="profile-bio">Full-stack developer with 3+ years experience creating digital solutions. Passionate about clean code and intuitive user experiences.</p>
+            <div class="profile-links">
+                <a href="#" class="profile-link"><i class="fas fa-file-alt"></i> Resume</a>
+                <a href="#" class="profile-link"><i class="fab fa-github"></i> GitHub</a>
+                <a href="#" class="profile-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills-section">
+            <h2>My Skills</h2>
+            
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <img src="images/web-dev.png" alt="Web development">
+                </div>
+                <div class="skill-content">
+                    <h3>Web Development</h3>
+                    <div class="skill-tags">
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>MongoDB</span>
+                        <span>Express</span>
+                    </div>
+                    <p>Building responsive, performant web applications with modern frameworks and architectures.</p>
+                </div>
+            </div>
+            
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <img src="images/design.png" alt="UI/UX Design">
+                </div>
+                <div class="skill-content">
+                    <h3>UI/UX Design</h3>
+                    <div class="skill-tags">
+                        <span>Figma</span>
+                        <span>Adobe XD</span>
+                        <span>User Research</span>
+                        <span>Prototyping</span>
+                    </div>
+                    <p>Creating beautiful and intuitive user interfaces with a focus on accessibility and user experience.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+            <h2>Get In Touch</h2>
+            <p class="contact-subtitle">Have a project in mind or want to collaborate?</p>
+            
+            <form class="contact-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">
+                    Send Message <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-container">
+        <div class="social-links">
+            <a href="https://twitter.com/" class="social-link" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.facebook.com/" class="social-link" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://github.com/" class="social-link" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/" class="social-link" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+        <p class="copyright">© <span id="current-year"></span> Athari Khaled. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            const icon = darkModeToggle.querySelector('i');
+            if (document.body.classList.contains('dark-mode')) {
+                icon.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                icon.classList.replace('fa-sun', 'fa-moon');
+            }
+        });
+
+        // Typing Animation
+        const typedText = document.querySelector('.typed-text');
+        const cursor = document.querySelector('.cursor');
+        const textArray = ['Web Developer', 'UI/UX Designer', 'Problem Solver', 'Tech Enthusiast'];
+        let textArrayIndex = 0;
+        let charIndex = 0;
+
+        const type = () => {
+            if (charIndex < textArray[textArrayIndex].length) {
+                typedText.textContent += textArray[textArrayIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(type, 100);
+            } else {
+                setTimeout(erase, 2000);
+            }
+        };
+
+        const erase = () => {
+            if (charIndex > 0) {
+                typedText.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+                charIndex--;
+                setTimeout(erase, 50);
+            } else {
+                textArrayIndex++;
+                if(textArrayIndex >= textArray.length) textArrayIndex = 0;
+                setTimeout(type, 500);
+            }
+        };
+
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Initialize typing effect after page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(type, 1000);
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
