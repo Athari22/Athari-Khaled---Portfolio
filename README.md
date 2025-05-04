@@ -1,6 +1,6 @@
 # Athari Khaled - Portfolio Website
 
-![Portfolio Screenshot](./Portfolio Website.png) <!-- Add a screenshot later -->
+![Portfolio Screenshot](./Portfolio%20Website.png)
 
 A responsive personal portfolio website showcasing my skills, projects, and contact information.
 
