@@ -35,11 +35,6 @@ portfolio website/
 Portfolio Website.png
 ```
 
-
-## 🌐 Live Demo
-
-[View Live Portfolio](https://athari22.github.io/Athari-Khaled---Portfolio/)<!-- Update with your link -->
-
 ## 🖥️ Local Development
 
 1. **Clone the repository**:
